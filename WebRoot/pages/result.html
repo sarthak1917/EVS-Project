@@ -1,0 +1,16 @@
+<div>
+  
+  <h2>Result</h2>
+  <table class="table table-bordered table-stripped table-hover">
+     <tbody>
+        <tr>
+           <th>Party Symbol</th><th>Candidate Name</th><th>No of Votes</th>
+        </tr>
+        <tr ng-repeat="candidate in candidates | orderBy:'nVotes':true ">
+           <td>{{candidate.pSymbol}}</td><td>{{candidate.name}}</td><td>{{candidate.nVotes}}</td>
+        </tr>
+     </tbody>
+  </table> 
+
+
+</div>

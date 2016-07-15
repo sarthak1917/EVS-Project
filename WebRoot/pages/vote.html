@@ -1,0 +1,38 @@
+<div ng-controller="voteCtrl">
+
+   <p ng-show="check" style="margin-left: 20px;margin-right: 100px;background-color: silver;  "class='jumbotron well'><span style="font-size: 30px" class="text-primary">{{title}}</span></p>
+   
+   <table style="margin-left: 20px;" class="table table-bordered table-stripped table-hover">
+      <thead>
+        <tr><td colspan="4"><h2>Available Candidate List</h2></td></tr>
+      </thead>
+      <tbody>
+         <tr>
+             <th>Candidate Name</th>
+             <th>Party Name</th>
+             <th>Symbol</th>
+             <th>Candidate Age</th>
+         </tr>
+         <tr ng-repeat="candidate in candidates">
+            <td>{{candidate.name}}</td>
+            <td>{{candidate.pName}}</td>
+            <td>{{candidate.pSymbol}}</td>
+            <td>{{candidate.age}}</td>
+         </tr>
+      </tbody>
+   
+   </table>
+   
+   <div class="form-group" style="margin-left: 40px">
+      
+       <h1>Vote</h1>
+      <h3>Select Candidate</h3>
+      <select class="form-control" ng-model='votedCandidate' ng-disabled="check" style="padding-left:50px;max-width:20%;display: inline-block;" >
+         <option ng-repeat="candidate in candidates" value="{{candidate.name}}">{{candidate.name}}</option>
+      </select>&nbsp;&nbsp;&nbsp;
+      <button style="display: inline-block; " type="button" ng-disabled="check" class='btn btn-success' ng-click="vote()">Vote</button>
+      
+   </div>
+
+   
+</div>

@@ -1,0 +1,27 @@
+<span><h2 style="padding-left: 50px;text-shadow:gray; ">Candidate Information</h2></span>
+<div style="padding-left: 70px;padding-right: 700px">
+   
+   <div class='form-group'>
+      <span ><h4>Candidate Name</h4></span>
+      <input type="text" class="form-control" ng-model="candidate.name">
+   </div>
+   
+   <div class="form-group">
+      <span><h4>Candidate Age</h4></span>
+      <input type="age" class='form-control' ng-model="candidate.age">
+   </div>
+   
+   <div class="form-group">
+      <span><h4>Party Name</h4></span>
+      <input type="text" class="form-control" ng-model="candidate.pName">
+   </div>
+   
+   <div class="form-group">
+      <span><h4>Symbol</h4></span>
+      <input type="text" class="form-control" ng-model="candidate.pSymbol">
+   </div>
+
+   <button type="button" class='btn btn-primary btn-lg' ng-click="add()">Add</button>&nbsp; &nbsp;
+   <button type="button" class="btn btn-default btn-lg" ng-click="clear()">Clear</button>
+   
+</div>

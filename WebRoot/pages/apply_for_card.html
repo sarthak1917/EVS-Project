@@ -1,0 +1,45 @@
+<div style="margin-left: 30px; padding-right:550px; padding-bottom: 10px"  class="container">
+
+   <div class="form-group">
+      <label>Name</label>
+      <input type="text" class='form-control' ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.name">
+   </div>
+   
+   <div class="form-group">
+      <label>Father's Name</label>
+      <input type="text" class='form-control' ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.fname">
+   </div>
+   
+    <div class="form-group">
+      <label>Email( Username )</label>
+      <input type="text" class='form-control' ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.email">
+   </div>
+   
+   <div class="form-group">
+      <label>Select any Proof</label>
+      <select class='form-control' ng-model="voterCardData.proof" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'">
+         <option value="driving_license">Driving License</option>
+         <option value="adhar_card">Adhar Card</option>
+      </select>
+      <input type="text" class='form-control' ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.proofNo">
+   </div>
+   
+   <div class="form-group">
+      <label>Date of Birth</label>
+      <input type="text"  class='form-control' ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.dob" placeholder="dd/mm/yyyy">
+   </div>
+   
+   <div class="form-group">
+      <label>Gender</label><br>
+      <input type="radio"  name="radio_group" value="male" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.gender">Male &nbsp &nbsp
+      <input type="radio" name="radio_group" value="female" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.gender">Female
+   </div>
+  
+   <div class='form-group'>
+      <label>Address</label><br>
+      <textarea cols="90" class="form-control" rows="5" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-model="voterCardData.address"></textarea>
+   </div>
+   
+   <button type="button" class="btn btn-primary" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-click="applyVoterCard()">Apply</button>&nbsp &nbsp
+   <button type="reset" class="btn btn-default" ng-disabled="$session.status=='waitingforapproval'||$session.status=='approved'" ng-click="reset()">Reset</button>
+</div>

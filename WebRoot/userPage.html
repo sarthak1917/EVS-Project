@@ -1,0 +1,50 @@
+<html ng-app="mainApp">
+
+    <head>
+      <script src="lib/jquery-1.12.3.min.js"></script>
+      <script src="lib/angular.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
+      <script src="lib/app.js"></script>
+      <script src="lib/json2.js"></script>
+      <script src="lib/controller.js"></script>
+      <script src="lib/service.js"></script>
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+     </head>
+     
+     <style>
+     
+       .well{
+         background-color:#32D427;
+       }
+       
+     
+     
+     </style>
+     
+     <body>
+     
+        <div class="well">
+          <h3 style="color: white;font-size: 60px" >Electronic Voting System</h3>
+          <ul class="list-inline text-right lead">
+          
+             <li style="font-size: 30px"><a style="text-decoration: none" ui-sref="vote">Vote</a></li>
+             <li style="font-size: 30px"><a style="text-decoration: none" ui-sref="apply_for_card">Apply for card</a></li>
+             <li style="font-size: 30px"><a style="text-decoration: none" ui-sref="result">Result</a></li>
+             <li style="font-size: 30px"><a style="text-decoration: none"  ui-sref="sign_out">Sign out</a></li>
+          
+          </ul>
+        </div>  
+       
+       <div>
+        
+          <div ui-view></div>
+       
+       </div>
+     
+     
+     </body> 
+
+</html>

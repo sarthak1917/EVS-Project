@@ -1,0 +1,39 @@
+
+<div>
+
+    
+    <table class="table table-stripped table-bordered table-hover">
+       <thead>
+         <tr><td colspan="9"><h3>Verify User Card</h3></td></tr>
+       </thead>
+       <tbody>
+         <tr>
+           <th>User Name</th>
+           <th>Father's Name</th>
+           <th>Proof</th>
+           <th>Proof Number</th>
+           <th>DOB</th>
+           <th>Gender</th>
+           <th>Address</th>
+           <th></th>
+           <th></th>
+         </tr>
+         <tr ng-repeat="users in appliedUsers">
+         
+           <td>{{users.name}}</td>
+           <td>{{users.fname}}</td>
+           <td>{{users.proof}}</td>
+           <td>{{users.proofNo}}</td>
+           <td>{{users.dob}}</td>
+           <td>{{users.gender}}</td>
+           <td>{{users.address}}</td>
+           <td><button type="button" class="btn btn-primary" ng-click="approve(users.email)">Approve</button></td>
+           <td><button type="button" class="btn btn-default">Reject</button></td>
+           
+         
+         </tr>
+        </tbody>
+     </table>
+        
+        
+</div>    
